@@ -4,9 +4,7 @@ This package provides a implementation of Memory-Augmented Monte Carlo Tree Sear
 
 ## Installation 
 
-With pip: `pip install mcts`
-
-Without pip: Download the zip/tar.gz file of the [latest release](https://github.com/pbsinclair42/MCTS/releases), extract it, and run `python setup.py install`
+Without pip: Download the zip/tar.gz file of the latest release, extract it, and run `python setup.py install`. And please keep this directory un-deleted.
 
 ## Quick Usage
 
