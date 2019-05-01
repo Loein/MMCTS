@@ -1,6 +1,6 @@
-# MCTS
+# M-MCTS
 
-This package provides a simple way of using Monte Carlo Tree Search in any perfect information domain.  
+This package provides a implementation of Memory-Augmented Monte Carlo Tree Search, starting from the original [MCTS](https://github.com/pbsinclair42/MCTS) and based on [this paper: Memory-Augmented Monte Carlo Tree Search](https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/viewFile/17139/15841)
 
 ## Installation 
 
