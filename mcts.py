@@ -102,9 +102,10 @@ class mcts():
                 bestNodes = [child]
             elif nodeValue == bestValue:
                 bestNodes.append(child)
-        return random.choice(bestNodes)
+        return random.choice(bestNodes) if bestNodes else None
 
     def getAction(self, root, bestChild):
         for action, node in root.children.items():
             if node is bestChild:
                 return action
+        return None
