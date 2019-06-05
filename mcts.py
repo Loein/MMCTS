@@ -4,6 +4,7 @@ import time
 import math
 import random
 
+from . import memory
 
 def randomPolicy(state):
     while not state.isTerminal():
@@ -45,6 +46,7 @@ class mcts():
             self.limitType = 'iterations'
         self.explorationConstant = explorationConstant
         self.rollout = rolloutPolicy
+        self.memoryCore = memory.Mem()
 
     def search(self, initialState):
         self.root = treeNode(initialState, None)
@@ -63,6 +65,8 @@ class mcts():
     def executeRound(self):
         node = self.selectNode(self.root)
         reward = self.rollout(node.state)
+        self.memoryCore.update(node.state, reward)
+        reward = self.memoryCore.query(node.state)
         self.backpropogate(node, reward)
 
     def selectNode(self, node):
